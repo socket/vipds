@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		8DD76FAC0486AB0100D96B5E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.c */; settings = {ATTRIBUTES = (); }; };
 		8DD76FB00486AB0100D96B5E /* server.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6A0FF2C0290799A04C91782 /* server.1 */; };
-		B883D45A1147CC0000502BD6 /* threadpool.c in Sources */ = {isa = PBXBuildFile; fileRef = B883D4591147CC0000502BD6 /* threadpool.c */; };
+		B80CD9C01148013B0012B0A2 /* vds_threadpool.c in Sources */ = {isa = PBXBuildFile; fileRef = B80CD9BF1148013B0012B0A2 /* vds_threadpool.c */; };
+		B80CD9D7114804770012B0A2 /* vds_common.c in Sources */ = {isa = PBXBuildFile; fileRef = B80CD9D6114804770012B0A2 /* vds_common.c */; };
+		B80CDA1C11480C1D0012B0A2 /* vds_threadqueue.c in Sources */ = {isa = PBXBuildFile; fileRef = B80CDA1B11480C1D0012B0A2 /* vds_threadqueue.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,8 +30,12 @@
 /* Begin PBXFileReference section */
 		08FB7796FE84155DC02AAC07 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		8DD76FB20486AB0100D96B5E /* server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = server; sourceTree = BUILT_PRODUCTS_DIR; };
-		B883D4581147CC0000502BD6 /* threadpool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = threadpool.h; path = core/threadpool.h; sourceTree = "<group>"; };
-		B883D4591147CC0000502BD6 /* threadpool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = threadpool.c; path = core/threadpool.c; sourceTree = "<group>"; };
+		B80CD9BE1148013B0012B0A2 /* vds_threadpool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vds_threadpool.h; path = core/vds_threadpool.h; sourceTree = "<group>"; };
+		B80CD9BF1148013B0012B0A2 /* vds_threadpool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = vds_threadpool.c; path = core/vds_threadpool.c; sourceTree = "<group>"; };
+		B80CD9C3114802CC0012B0A2 /* vds_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vds_common.h; sourceTree = "<group>"; };
+		B80CD9D6114804770012B0A2 /* vds_common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vds_common.c; sourceTree = "<group>"; };
+		B80CDA1A11480C1D0012B0A2 /* vds_threadqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vds_threadqueue.h; sourceTree = "<group>"; };
+		B80CDA1B11480C1D0012B0A2 /* vds_threadqueue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vds_threadqueue.c; sourceTree = "<group>"; };
 		C6A0FF2C0290799A04C91782 /* server.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = server.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,8 +56,6 @@
 				08FB7795FE84155DC02AAC07 /* Source */,
 				C6A0FF2B0290797F04C91782 /* Documentation */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
-				B883D4581147CC0000502BD6 /* threadpool.h */,
-				B883D4591147CC0000502BD6 /* threadpool.c */,
 			);
 			name = server;
 			sourceTree = "<group>";
@@ -59,6 +63,7 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				B80CD9BD114801270012B0A2 /* core */,
 				08FB7796FE84155DC02AAC07 /* main.c */,
 			);
 			name = Source;
@@ -70,6 +75,19 @@
 				8DD76FB20486AB0100D96B5E /* server */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B80CD9BD114801270012B0A2 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				B80CD9C3114802CC0012B0A2 /* vds_common.h */,
+				B80CD9D6114804770012B0A2 /* vds_common.c */,
+				B80CD9BE1148013B0012B0A2 /* vds_threadpool.h */,
+				B80CD9BF1148013B0012B0A2 /* vds_threadpool.c */,
+				B80CDA1A11480C1D0012B0A2 /* vds_threadqueue.h */,
+				B80CDA1B11480C1D0012B0A2 /* vds_threadqueue.c */,
+			);
+			name = core;
 			sourceTree = "<group>";
 		};
 		C6A0FF2B0290797F04C91782 /* Documentation */ = {
@@ -124,7 +142,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DD76FAC0486AB0100D96B5E /* main.c in Sources */,
-				B883D45A1147CC0000502BD6 /* threadpool.c in Sources */,
+				B80CD9C01148013B0012B0A2 /* vds_threadpool.c in Sources */,
+				B80CD9D7114804770012B0A2 /* vds_common.c in Sources */,
+				B80CDA1C11480C1D0012B0A2 /* vds_threadqueue.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
