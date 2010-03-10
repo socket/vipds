@@ -12,6 +12,7 @@
 		B80CD9C01148013B0012B0A2 /* vds_threadpool.c in Sources */ = {isa = PBXBuildFile; fileRef = B80CD9BF1148013B0012B0A2 /* vds_threadpool.c */; };
 		B80CD9D7114804770012B0A2 /* vds_common.c in Sources */ = {isa = PBXBuildFile; fileRef = B80CD9D6114804770012B0A2 /* vds_common.c */; };
 		B80CDA1C11480C1D0012B0A2 /* vds_threadqueue.c in Sources */ = {isa = PBXBuildFile; fileRef = B80CDA1B11480C1D0012B0A2 /* vds_threadqueue.c */; };
+		B80CDA5111480EAF0012B0A2 /* vds_thread.c in Sources */ = {isa = PBXBuildFile; fileRef = B80CDA5011480EAF0012B0A2 /* vds_thread.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +37,8 @@
 		B80CD9D6114804770012B0A2 /* vds_common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vds_common.c; sourceTree = "<group>"; };
 		B80CDA1A11480C1D0012B0A2 /* vds_threadqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vds_threadqueue.h; sourceTree = "<group>"; };
 		B80CDA1B11480C1D0012B0A2 /* vds_threadqueue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vds_threadqueue.c; sourceTree = "<group>"; };
+		B80CDA4F11480EAF0012B0A2 /* vds_thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vds_thread.h; sourceTree = "<group>"; };
+		B80CDA5011480EAF0012B0A2 /* vds_thread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vds_thread.c; sourceTree = "<group>"; };
 		C6A0FF2C0290799A04C91782 /* server.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = server.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +89,8 @@
 				B80CD9BF1148013B0012B0A2 /* vds_threadpool.c */,
 				B80CDA1A11480C1D0012B0A2 /* vds_threadqueue.h */,
 				B80CDA1B11480C1D0012B0A2 /* vds_threadqueue.c */,
+				B80CDA4F11480EAF0012B0A2 /* vds_thread.h */,
+				B80CDA5011480EAF0012B0A2 /* vds_thread.c */,
 			);
 			name = core;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 				B80CD9C01148013B0012B0A2 /* vds_threadpool.c in Sources */,
 				B80CD9D7114804770012B0A2 /* vds_common.c in Sources */,
 				B80CDA1C11480C1D0012B0A2 /* vds_threadqueue.c in Sources */,
+				B80CDA5111480EAF0012B0A2 /* vds_thread.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
