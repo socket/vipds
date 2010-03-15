@@ -10,6 +10,8 @@
 #include "vds_common.h"
 #include "vds_thread.h"
 
+// some comment to test git
+
 void 
 TPTHREAD_Init(TPTHREAD * thread, void* (*function)(void *), UBYTE number) {
   thread->number = number;
